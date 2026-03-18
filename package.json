@@ -1,13 +1,13 @@
 {
-  "name": "vscode-color-rotator",
-  "displayName": "VS Code Color Rotator",
+  "name": "window-color-rotator",
+  "displayName": "Window Color Rotator",
   "publisher": "gcc3",
   "version": "1.0.0",
   "description": "Rotate VSCode window colors for different projects",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lhypds/vscode-color-rotator.git"
+    "url": "https://github.com/lhypds/vscode-window-color-rotator.git"
   },
   "categories": [
     "Other"
@@ -27,16 +27,16 @@
   "contributes": {
     "commands": [
       {
-        "command": "vscode-color-rotator.rotate",
-        "title": "Window Color Rotate"
+        "command": "window-color-rotator.rotate",
+        "title": "Window Color Rotator: Rotate"
       },
       {
-        "command": "vscode-color-rotator.load",
-        "title": "Window Color Reload"
+        "command": "window-color-rotator.load",
+        "title": "Window Color Rotator: Reload"
       },
       {
-        "command": "vscode-color-rotator.clear",
-        "title": "Window Color Clear"
+        "command": "window-color-rotator.clear",
+        "title": "Window Color Rotator: Clear"
       }
     ]
   },

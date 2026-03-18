@@ -1,15 +1,15 @@
 
-VS Code Color Rotator
-=====================
+VS Code Window Color Rotator
+============================
 
 
-Use different color for VSCode window, for different projects.  
+Rotate to use different color for VSCode window, for different projects.  
 
 
 Quick Start
 -----------
 
-Ctrl + Shift + P, type `Window Color Rotate` to rotate window color.  
+Ctrl + Shift + P, type `Window Color Rotator` to trigger command.  
 It can remember the color for each project.  
 
 
@@ -22,7 +22,7 @@ The configuration file is at `~/.vscode/extensions/gcc3.vscode-color-rotator/col
 Rotate color  
 To rotate color for the current project.  
 Use command:  
-`Window Color Rotate`.  
+`Window Color Rotator: Rotate`.  
 It will rotate choose a color for the current project window, and write the color to `settings.json` file.  
 And save the project path to the color to `colors.json` file.  
 
@@ -30,12 +30,12 @@ Reload color
 If you missing the color in `settings.json`, you can reload the color from the configuration file.  
 For reload color from the configuration file to the `settings.json`.  
 Use command:  
-`Window Color Reload`.  
+`Window Color Rotator: Reload`.  
 
 Clear color  
 To clear the color for current project winddow. For both in `settings.json` and configuration file (`colors.json`).  
 Use command:  
-`Window Color Clear`.  
+`Window Color Rotator: Clear`.  
 
 
 Local Execute
