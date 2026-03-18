@@ -1,0 +1,82 @@
+[
+  {
+    "colorName": "pink",
+    "color": "#ffeaea",
+    "workbench.colorCustomizations": {
+      "titleBar.activeBackground": "#ffeaea",
+      "titleBar.inactiveBackground": "#ffeaea",
+      "statusBar.background": "#ffeaea"
+    },
+    "projectPath": ""
+  },
+  {
+    "colorName": "green",
+    "color": "#f2ffea",
+    "workbench.colorCustomizations": {
+      "titleBar.activeBackground": "#f2ffea",
+      "titleBar.inactiveBackground": "#f2ffea",
+      "statusBar.background": "#f2ffea"
+    },
+    "projectPath": ""
+  },
+  {
+    "colorName": "blue",
+    "color": "#eafeff",
+    "workbench.colorCustomizations": {
+      "titleBar.activeBackground": "#eafeff",
+      "titleBar.inactiveBackground": "#eafeff",
+      "statusBar.background": "#eafeff"
+    },
+    "projectPath": ""
+  },
+  {
+    "colorName": "skyblue",
+    "color": "#eaf6ff",
+    "workbench.colorCustomizations": {
+      "titleBar.activeBackground": "#eaf6ff",
+      "titleBar.inactiveBackground": "#eaf6ff",
+      "statusBar.background": "#eaf6ff"
+    },
+    "projectPath": ""
+  },
+  {
+    "colorName": "purple",
+    "color": "#eceaff",
+    "workbench.colorCustomizations": {
+      "titleBar.activeBackground": "#eceaff",
+      "titleBar.inactiveBackground": "#eceaff",
+      "statusBar.background": "#eceaff"
+    },
+    "projectPath": ""
+  },
+  {
+    "colorName": "lavender",
+    "color": "#feeaff",
+    "workbench.colorCustomizations": {
+      "titleBar.activeBackground": "#feeaff",
+      "titleBar.inactiveBackground": "#feeaff",
+      "statusBar.background": "#feeaff"
+    },
+    "projectPath": ""
+  },
+  {
+    "colorName": "rose",
+    "color": "#ffeaf2",
+    "workbench.colorCustomizations": {
+      "titleBar.activeBackground": "#ffeaf2",
+      "titleBar.inactiveBackground": "#ffeaf2",
+      "statusBar.background": "#ffeaf2"
+    },
+    "projectPath": ""
+  },
+  {
+    "colorName": "red",
+    "color": "#ffeaeb",
+    "workbench.colorCustomizations": {
+      "titleBar.activeBackground": "#ffeaeb",
+      "titleBar.inactiveBackground": "#ffeaeb",
+      "statusBar.background": "#ffeaeb"
+    },
+    "projectPath": ""
+  }
+]

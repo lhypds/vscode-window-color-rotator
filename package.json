@@ -1,0 +1,16 @@
+{
+  "name": "vscode-color-rotator",
+  "version": "1.0.0",
+  "description": "Rotate VSCode window colors for different projects",
+  "scripts": {
+    "start": "tsx color-rotator.ts",
+    "build": "tsc",
+    "rotate": "tsx color-rotator.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "prettier": "^3.8.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
