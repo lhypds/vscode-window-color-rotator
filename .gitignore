@@ -1,3 +1,4 @@
 colors.json
 node_modules/
 dist/
+*.vsix
