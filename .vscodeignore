@@ -11,7 +11,6 @@ rotate.sh
 clear.sh
 
 # Example/dev files
-colors.json.example
 .prettierrc.yaml
 .prettierignore
 
