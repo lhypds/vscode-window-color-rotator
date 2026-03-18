@@ -4,6 +4,19 @@
   "publisher": "gcc3",
   "version": "1.0.0",
   "description": "Rotate VSCode window colors for different projects",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lhypds/vscode-color-rotator.git"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "color",
+    "theme",
+    "workspace"
+  ],
   "engines": {
     "vscode": "^1.60.0"
   },

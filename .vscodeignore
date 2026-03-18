@@ -1,0 +1,26 @@
+# Source files
+*.ts
+tsconfig.json
+
+# Shell scripts (not needed in extension)
+*.sh
+*.command
+setup.sh
+load.sh
+rotate.sh
+clear.sh
+
+# Example/dev files
+colors.json.example
+.prettierrc.yaml
+.prettierignore
+
+# Git
+.git/**
+.gitignore
+
+# Node dev only
+package-lock.json
+
+# VS Code settings dir
+.vscode/**

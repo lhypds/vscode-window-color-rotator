@@ -10,6 +10,6 @@
     "skipLibCheck": true,
     "resolveJsonModule": true
   },
-  "include": ["extension.ts"],
+  "include": ["extension.ts", "color-rotator.ts"],
   "exclude": ["node_modules", "dist"]
 }
