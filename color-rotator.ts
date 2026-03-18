@@ -224,6 +224,89 @@ export function loadColor(projectPath: string, currentDir: string): void {
   console.log('Color loaded to `workbench.colorCustomizations`.');
 }
 
+export function clearColor(projectPath: string, currentDir: string): void {
+  // Load `colors.json` and clear the projectPath assignment for this project
+  const colorsPath = path.join(currentDir, 'colors.json');
+  if (fs.existsSync(colorsPath)) {
+    let colorsJson: ColorsJson;
+    try {
+      const colorsContent = fs.readFileSync(colorsPath, 'utf-8');
+      colorsJson = JSON.parse(colorsContent);
+    } catch {
+      console.log(`Error: ${colorsPath} contains invalid JSON.`);
+      return;
+    }
+
+    let cleared = false;
+    if (Array.isArray(colorsJson)) {
+      for (const entry of colorsJson) {
+        if (entry.projectPath === projectPath) {
+          entry.projectPath = '';
+          cleared = true;
+        }
+      }
+      if (cleared) {
+        fs.writeFileSync(
+          colorsPath,
+          JSON.stringify(colorsJson, null, 2) + '\n',
+          'utf-8'
+        );
+        console.log('Cleared projectPath assignment in `colors.json`.');
+      }
+    } else if (typeof colorsJson === 'object' && colorsJson !== null) {
+      for (const value of Object.values(colorsJson)) {
+        const entry = value as ColorEntry;
+        if (entry.projectPath === projectPath) {
+          entry.projectPath = '';
+          cleared = true;
+        }
+      }
+      if (cleared) {
+        fs.writeFileSync(
+          colorsPath,
+          JSON.stringify(colorsJson, null, 2) + '\n',
+          'utf-8'
+        );
+        console.log('Cleared projectPath assignment in `colors.json`.');
+      }
+    }
+    if (!cleared) {
+      console.log(`No color was assigned to project: ${projectPath}`);
+    }
+  } else {
+    console.log('`colors.json` not found, nothing to clear.');
+  }
+
+  // Remove `workbench.colorCustomizations` from `settings.json`
+  const settingsPath = path.join(projectPath, '.vscode', 'settings.json');
+  if (!fs.existsSync(settingsPath)) {
+    console.log('`settings.json` not found, nothing to clear.');
+    return;
+  }
+  let settingsJson: Record<string, unknown>;
+  try {
+    const settingsContent = fs.readFileSync(settingsPath, 'utf-8');
+    settingsJson = JSON.parse(settingsContent);
+  } catch {
+    console.log(`Error: ${settingsPath} contains invalid JSON.`);
+    return;
+  }
+
+  if ('workbench.colorCustomizations' in settingsJson) {
+    delete settingsJson['workbench.colorCustomizations'];
+    fs.writeFileSync(
+      settingsPath,
+      JSON.stringify(settingsJson, null, 2) + '\n',
+      'utf-8'
+    );
+    console.log(
+      'Removed `workbench.colorCustomizations` from `settings.json`.'
+    );
+  } else {
+    console.log('`workbench.colorCustomizations` not set, nothing to remove.');
+  }
+}
+
 // Resolve paths
 const currentDir = path.dirname(path.resolve(__filename));
 const dotVscodePath = path.dirname(currentDir);
@@ -243,9 +326,13 @@ if (path.basename(dotVscodePath) !== '.vscode') {
   const command = process.argv[2];
   if (command === 'load') {
     loadColor(projectPath, currentDir);
+  } else if (command === 'clear') {
+    clearColor(projectPath, currentDir);
   } else if (command === 'rotate' || !command) {
     rotateColor(projectPath, currentDir);
   } else {
-    console.log(`Unknown command: "${command}". Use "rotate" or "load".`);
+    console.log(
+      `Unknown command: "${command}". Use "rotate", "load", or "clear".`
+    );
   }
 }

@@ -19,7 +19,11 @@
       },
       {
         "command": "vscode-color-rotator.load",
-        "title": "Load Window Color"
+        "title": "Reload Window Color"
+      },
+      {
+        "command": "vscode-color-rotator.clear",
+        "title": "Clear Window Color"
       }
     ]
   },

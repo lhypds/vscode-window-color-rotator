@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { rotateColor, loadColor } from './color-rotator';
+import { rotateColor, loadColor, clearColor } from './color-rotator';
 
 export function activate(context: vscode.ExtensionContext): void {
   const extensionPath = context.extensionPath;
@@ -28,7 +28,19 @@ export function activate(context: vscode.ExtensionContext): void {
     }
   );
 
-  context.subscriptions.push(rotateDisposable, loadDisposable);
+  const clearDisposable = vscode.commands.registerCommand(
+    'vscode-color-rotator.clear',
+    () => {
+      const projectPath = vscode.workspace.workspaceFolders?.[0]?.uri.fsPath;
+      if (!projectPath) {
+        vscode.window.showInformationMessage('No workspace folder is open.');
+        return;
+      }
+      clearColor(projectPath, extensionPath);
+    }
+  );
+
+  context.subscriptions.push(rotateDisposable, loadDisposable, clearDisposable);
 }
 
 export function deactivate(): void {}
