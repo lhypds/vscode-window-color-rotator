@@ -5,6 +5,8 @@
     "workbench.colorCustomizations": {
       "titleBar.activeBackground": "#ffeaea",
       "titleBar.inactiveBackground": "#ffeaea",
+      "titleBar.activeForeground": "#1e1e1e",
+      "titleBar.inactiveForeground": "#6d6c6f",
       "statusBar.background": "#ffeaea"
     },
     "projectPath": []
@@ -15,6 +17,8 @@
     "workbench.colorCustomizations": {
       "titleBar.activeBackground": "#f2ffea",
       "titleBar.inactiveBackground": "#f2ffea",
+      "titleBar.activeForeground": "#1e1e1e",
+      "titleBar.inactiveForeground": "#6d6c6f",
       "statusBar.background": "#f2ffea"
     },
     "projectPath": []
@@ -25,6 +29,8 @@
     "workbench.colorCustomizations": {
       "titleBar.activeBackground": "#eafeff",
       "titleBar.inactiveBackground": "#eafeff",
+      "titleBar.activeForeground": "#1e1e1e",
+      "titleBar.inactiveForeground": "#6d6c6f",
       "statusBar.background": "#eafeff"
     },
     "projectPath": []
@@ -35,6 +41,8 @@
     "workbench.colorCustomizations": {
       "titleBar.activeBackground": "#eaf6ff",
       "titleBar.inactiveBackground": "#eaf6ff",
+      "titleBar.activeForeground": "#1e1e1e",
+      "titleBar.inactiveForeground": "#6d6c6f",
       "statusBar.background": "#eaf6ff"
     },
     "projectPath": []
@@ -45,6 +53,8 @@
     "workbench.colorCustomizations": {
       "titleBar.activeBackground": "#eceaff",
       "titleBar.inactiveBackground": "#eceaff",
+      "titleBar.activeForeground": "#1e1e1e",
+      "titleBar.inactiveForeground": "#6d6c6f",
       "statusBar.background": "#eceaff"
     },
     "projectPath": []
@@ -55,6 +65,8 @@
     "workbench.colorCustomizations": {
       "titleBar.activeBackground": "#feeaff",
       "titleBar.inactiveBackground": "#feeaff",
+      "titleBar.activeForeground": "#1e1e1e",
+      "titleBar.inactiveForeground": "#6d6c6f",
       "statusBar.background": "#feeaff"
     },
     "projectPath": []
@@ -65,6 +77,8 @@
     "workbench.colorCustomizations": {
       "titleBar.activeBackground": "#ffeaf2",
       "titleBar.inactiveBackground": "#ffeaf2",
+      "titleBar.activeForeground": "#1e1e1e",
+      "titleBar.inactiveForeground": "#6d6c6f",
       "statusBar.background": "#ffeaf2"
     },
     "projectPath": []
@@ -75,6 +89,8 @@
     "workbench.colorCustomizations": {
       "titleBar.activeBackground": "#ffeaeb",
       "titleBar.inactiveBackground": "#ffeaeb",
+      "titleBar.activeForeground": "#1e1e1e",
+      "titleBar.inactiveForeground": "#6d6c6f",
       "statusBar.background": "#ffeaeb"
     },
     "projectPath": []
