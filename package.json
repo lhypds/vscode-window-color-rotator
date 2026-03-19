@@ -31,12 +31,12 @@
         "title": "Window Color Rotator: Rotate"
       },
       {
-        "command": "window-color-rotator.load",
-        "title": "Window Color Rotator: Reload"
-      },
-      {
         "command": "window-color-rotator.clear",
         "title": "Window Color Rotator: Clear"
+      },
+      {
+        "command": "window-color-rotator.resetall",
+        "title": "Window Color Rotator: Reset All"
       }
     ]
   },

@@ -24,18 +24,17 @@ To rotate color for the current project.
 Use command:  
 `Window Color Rotator: Rotate`.  
 It will rotate choose a color for the current project window, and write the color to `settings.json` file.  
-And save the project path to the color to `colors.json` file.  
-
-Reload color  
-If you missing the color in `settings.json`, you can reload the color from the configuration file.  
-For reload color from the configuration file to the `settings.json`.  
-Use command:  
-`Window Color Rotator: Reload`.  
+And save the project path to the color to `colors.json` file.   
 
 Clear color  
 To clear the color for current project winddow. For both in `settings.json` and configuration file (`colors.json`).  
 Use command:  
 `Window Color Rotator: Clear`.  
+
+Reset all
+To clear all the colors for all projects. For both in `settings.json` and configuration file (`colors.json`).
+Use command:
+`Window Color Rotator: Reset All`.
 
 
 Local Execute
@@ -45,5 +44,5 @@ Clone the source code to project `.vscode` folder.
 Run `setup.sh` to install dependencies.  
 
 `rotate.sh` to rotate window color.  
-`load.sh` to load window color.  
 `clear.sh` to clear window color.  
+`reset.sh` to reset all window colors.  

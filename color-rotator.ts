@@ -308,6 +308,27 @@ export function clearColor(projectPath: string, currentDir: string): void {
   }
 }
 
+export function resetColors(projectPath: string, currentDir: string): void {
+  // Clear the current project color
+  clearColor(projectPath, currentDir);
+
+  // Copy `colors.json.example` to `colors.json` to reset all colors and assignments
+  const colorsPath = path.join(currentDir, 'colors.json');
+  const examplePath = path.join(currentDir, 'colors.json.example');
+
+  if (!fs.existsSync(examplePath)) {
+    console.log('`colors.json.example` not found.');
+    return;
+  }
+
+  try {
+    fs.copyFileSync(examplePath, colorsPath);
+    console.log('`colors.json` has been reset to `colors.json.example`.');
+  } catch (error) {
+    console.log(`Error: Failed to reset colors.json: ${error}`);
+  }
+}
+
 // Resolve paths
 const currentDir = path.dirname(path.resolve(__filename));
 const dotVscodePath = path.dirname(currentDir);
@@ -329,11 +350,13 @@ if (path.basename(dotVscodePath) !== '.vscode') {
     loadColor(projectPath, currentDir);
   } else if (command === 'clear') {
     clearColor(projectPath, currentDir);
+  } else if (command === 'resetall') {
+    resetColors(projectPath, currentDir);
   } else if (command === 'rotate' || !command) {
     rotateColor(projectPath, currentDir);
   } else {
     console.log(
-      `Unknown command: "${command}". Use "rotate", "load", or "clear".`
+      `Unknown command: "${command}". Use "rotate", "load", "clear", or "resetall".`
     );
   }
 }
