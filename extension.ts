@@ -35,12 +35,24 @@ export function activate(context: vscode.ExtensionContext): void {
 
   const resetAllDisposable = vscode.commands.registerCommand(
     'window-color-rotator.resetall',
-    () => {
+    async () => {
       const projectPath = vscode.workspace.workspaceFolders?.[0]?.uri.fsPath;
       if (!projectPath) {
         vscode.window.showInformationMessage('No workspace folder is open.');
         return;
       }
+
+      // Show a confirmation dialog before resetting all colors
+      const confirmLabel = 'Reset';
+      const confirmation = await vscode.window.showWarningMessage(
+        'This will reset color for all workspaces. Continue?',
+        { modal: true },
+        confirmLabel
+      );
+      if (confirmation !== confirmLabel) {
+        return;
+      }
+
       resetColors(projectPath, extensionPath);
     }
   );
