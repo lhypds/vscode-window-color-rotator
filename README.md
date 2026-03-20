@@ -6,23 +6,32 @@ VS Code Window Color Rotator
 Rotate to use a different color for VS Code window in different projects.  
 
 
+Installation
+------------
+
+Search `Window Color Rotator` in the VS Code extension marketplace and install it.  
+
+* Uninstall  
+Uninstall the extension from the VS Code extension marketplace.  
+After uninstalling the extension, you may notice the color for the project window may still remain.  
+To clear the color, you can manually remove it from the `.vscode/.settings.json` file in the project folder.  
+Simply remove the `workbench.colorCustomizations` field in the `settings.json` file.  
+
+
 Quick Start
 -----------
 
 Click the `Rotate Color` button in the status bar to rotate the color for the current project window.  
 It can remember a color for each project (path).  
 
-
 Command Palette
----------------
-
 Press Ctrl + Shift + P, then type `Window Color Rotator` to trigger the command.  
 
 Support commands:  
-- `Window Color Rotator: Rotate` to rotate the color for the current project window.  
-- `Window Color Rotator: Clear` to clear the color for the current project window.  
-- `Window Color Rotator: Reset All` to clear the colors for all projects.  
-- `Window Color Rotator: Customize Colors` to customize the colors in the color configuration file.  
+`Window Color Rotator: Rotate` to rotate the color for the current project window.  
+`Window Color Rotator: Clear` to clear the color for the current project window.  
+`Window Color Rotator: Reset All` to clear the colors for all projects.  
+`Window Color Rotator: Customize Colors` to customize the colors in the color configuration file.  
 
 
 How It Works
