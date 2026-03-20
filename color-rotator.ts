@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import * as vscode from 'vscode';
+import JSON5 from 'json5';
 
 const VERSION = '1.0.0';
 console.log(`vscode-color-rotator v${VERSION}`);
@@ -45,7 +46,7 @@ export function rotateColor(
   let settingsJson: Record<string, unknown>;
   try {
     const settingsContent = fs.readFileSync(settingsPath, 'utf-8');
-    settingsJson = JSON.parse(settingsContent);
+    settingsJson = JSON5.parse(settingsContent);
   } catch {
     console.log(`Error: ${settingsPath} contains invalid JSON.`);
     vscode.window.showWarningMessage(
@@ -68,7 +69,7 @@ export function rotateColor(
   let colorsJson: ColorsJson;
   try {
     const colorsContent = fs.readFileSync(colorsPath, 'utf-8');
-    colorsJson = JSON.parse(colorsContent);
+    colorsJson = JSON5.parse(colorsContent);
   } catch {
     console.log(`Error: ${colorsPath} contains invalid JSON.`);
     vscode.window.showWarningMessage(
@@ -174,7 +175,7 @@ export function loadColor(
   let colorsJson: ColorsJson;
   try {
     const colorsContent = fs.readFileSync(colorsPath, 'utf-8');
-    colorsJson = JSON.parse(colorsContent);
+    colorsJson = JSON5.parse(colorsContent);
   } catch {
     console.log(`Error: ${colorsPath} contains invalid JSON.`);
     vscode.window.showWarningMessage(
@@ -230,7 +231,7 @@ export function loadColor(
   let settingsJson: Record<string, unknown>;
   try {
     const settingsContent = fs.readFileSync(settingsPath, 'utf-8');
-    settingsJson = JSON.parse(settingsContent);
+    settingsJson = JSON5.parse(settingsContent);
   } catch {
     console.log(`Error: ${settingsPath} contains invalid JSON.`);
     vscode.window.showWarningMessage(
@@ -261,7 +262,7 @@ export function clearColor(
     let colorsJson: ColorsJson;
     try {
       const colorsContent = fs.readFileSync(colorsPath, 'utf-8');
-      colorsJson = JSON.parse(colorsContent);
+      colorsJson = JSON5.parse(colorsContent);
     } catch {
       console.log(`Error: ${colorsPath} contains invalid JSON.`);
       vscode.window.showWarningMessage(
@@ -319,7 +320,7 @@ export function clearColor(
   let settingsJson: Record<string, unknown>;
   try {
     const settingsContent = fs.readFileSync(settingsPath, 'utf-8');
-    settingsJson = JSON.parse(settingsContent);
+    settingsJson = JSON5.parse(settingsContent);
   } catch {
     console.log(`Error: ${settingsPath} contains invalid JSON.`);
     vscode.window.showWarningMessage(
