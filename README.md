@@ -19,7 +19,7 @@ Remove the `workbench.colorCustomizations` field in the `.vscode/settings.json` 
 Quick Start
 -----------
 
-Status bar button
+Status bar button  
 Click the `Rotate Color` button in the status bar to rotate the color for the current project window.  
 It can remember a color for each project (path).  
 
