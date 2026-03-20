@@ -5,7 +5,7 @@ VS Code Window Color Rotator
 
 Rotate to use a different color for VS Code window in different projects.  
 
-Tips: currently it works better for `light` color themes, for `dark` color themes, it is suggested to add and replace customized colors. (refer `Customize Colors` section)  
+Tips: currently it works better for `light` color themes, for `dark` color themes, it is suggested to add and replace with customized colors. (refer `Customize Colors` section)  
 
 
 Installation
