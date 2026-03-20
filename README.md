@@ -5,6 +5,8 @@ VS Code Window Color Rotator
 
 Rotate to use a different color for VS Code window in different projects.  
 
+Tips: currently it works better for `light` color themes, for `dark` color themes, it is suggested to add and replace customized colors. (refer `Customize Colors` section)  
+
 
 Installation
 ------------
@@ -35,21 +37,29 @@ Support commands:
 How It Works
 ------------
 
-Basically it writes a custom color into `.vscode/.settings.json` file. (`workbench.colorCustomizations` field).  
+Basically it writes a custom color into `.vscode/.settings.json` file `workbench.colorCustomizations` field in the project folder.  
 
-Rotate color  
+When rotating color, it will choose a color from the color configuration file (`colors.json`), and write the color to `.vscode/settings.json` file. It will save the project path to color configuration file (`colors.json`).  
+
+Everytime when user opens a project, it will check the project path in the color configuration file (`colors.json`), if there is a color associated with the project path, it will load the color to `.vscode/settings.json` file.  
+
+Functions:
+
+1. Rotate color  
 To rotate the color for the current project window.  
 Use command:  
 `Window Color Rotator: Rotate`.  
 It will rotate and choose a color for the current project window from the `colors.json`, and write the color to `.vscode/settings.json` file. It will save the project path to color configuration file (`colors.json`).   
 
-Clear color  
+2. Clear color  
 Clear the color for the current project window, both in `.vscode/settings.json` and in color configuration file (`colors.json`).  
 Use command:  
 `Window Color Rotator: Clear`.  
 
-Reset all  
+3. Reset all  
 Clear the colors for all projects, for both in `.vscode/settings.json` and in color configuration file (`colors.json`).  
+It will copy the default color configuration file (`colors.json.example`) and replace the `colors.json` file.  
+All the colors and project paths will be cleared.  
 Use command:  
 `Window Color Rotator: Reset All`.  
 
@@ -57,7 +67,7 @@ Use command:
 Customize Colors
 ----------------
 
-You can edit colors configuration file (`colors.json`) to customize the colors.  
+You can edit colors configuration file (`colors.json`) to add your customized colors.  
 Use command:  
 `Window Color Rotator: Customize Colors` to open the color configuration file.
 
