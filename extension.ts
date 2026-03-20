@@ -1,10 +1,5 @@
 import * as vscode from 'vscode';
-import {
-  rotateColor,
-  loadColor,
-  clearColor,
-  resetColors
-} from './color-rotator';
+import { rotateColor, loadColor, clearColor } from './color-rotator';
 
 async function initializeColorConfiguration(
   context: vscode.ExtensionContext,
@@ -51,7 +46,7 @@ export async function activate(
   } catch {
     console.log('`colors.json` not found, creating from example...');
 
-    // Popup a warning message at the right bottom corner (button `Initialize `colors.json``)
+    // Popup a warning message at the right bottom corner
     const initializeButton = 'Initialize `colors.json`';
     vscode.window
       .showWarningMessage(
@@ -92,21 +87,24 @@ export async function activate(
   const resetAllDisposable = vscode.commands.registerCommand(
     'window-color-rotator.resetall',
     async () => {
-      // Show a command-palette style confirmation before resetting all colors
-      const confirmation = await vscode.window.showQuickPick(
-        ['Reset colors for all project windows', 'Cancel'],
-        {
-          placeHolder:
-            'This will reset colors for all project windows. Continue?',
-          ignoreFocusOut: true
-        }
-      );
-      if (confirmation !== 'Reset colors for all project windows') {
-        return;
-      }
+      // Popup a warning message at the right bottom corner
+      const initializeButton = 'Reset all and re-initialize `colors.json`';
+      vscode.window
+        .showWarningMessage(
+          'Warning: this will reset colors for all project windows.',
+          initializeButton
+        )
+        .then(async selection => {
+          if (selection === initializeButton) {
+            await initializeColorConfiguration(context, colorsFileUri);
+          }
+        });
 
+      // Clear the current project color in `.vscode/settings.json`
       const projectPath = vscode.workspace.workspaceFolders?.[0]?.uri.fsPath;
-      resetColors(projectPath, extensionPath, userStoragePath);
+      if (projectPath) {
+        clearColor(projectPath, extensionPath, userStoragePath);
+      }
     }
   );
 

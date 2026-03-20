@@ -5,8 +5,6 @@ VS Code Window Color Rotator
 
 Rotate to use a different color for VS Code window in different projects.  
 
-Tips: currently it works better for `light` color themes, for `dark` color themes, it is suggested to add and replace with customized colors. (refer `Customize Colors` section)  
-
 
 Installation
 ------------
@@ -58,7 +56,7 @@ Use command:
 
 3. Reset all  
 Clear the colors for all projects, for both in `.vscode/settings.json` and in color configuration file (`colors.json`).  
-It will copy the default color configuration file (`colors.json.example`) and replace the `colors.json` file.  
+It will copy the default color configuration file (`colors.json.example` or `colors.dark.json.example`) and replace the `colors.json` file.  
 All the colors and project paths will be cleared.  
 Use command:  
 `Window Color Rotator: Reset All`.  

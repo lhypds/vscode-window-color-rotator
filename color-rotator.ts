@@ -363,7 +363,8 @@ export function clearColor(
 export function resetColors(
   projectPath: string | undefined,
   extensionPath: string,
-  userStoragePath: string
+  userStoragePath: string,
+  theme?: 'light' | 'dark'
 ): void {
   // Clear the current project color
   if (projectPath) {
@@ -372,7 +373,14 @@ export function resetColors(
 
   // Copy `colors.json.example` to `colors.json` to reset all colors and assignments
   const colorsPath = path.join(userStoragePath, 'colors.json');
-  const examplePath = path.join(extensionPath, 'colors.json.example');
+
+  let examplePath;
+  if (theme === 'dark') {
+    examplePath = path.join(extensionPath, 'colors.dark.json.example');
+  } else {
+    // light theme by default
+    examplePath = path.join(extensionPath, 'colors.json.example');
+  }
 
   if (!fs.existsSync(examplePath)) {
     console.log('`colors.json.example` not found.');
