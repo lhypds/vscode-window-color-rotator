@@ -45,7 +45,7 @@ Use command:
 Customize Colors
 ----------------
 
-You can use colors configuration (`colors.json`) to customize the colors.  
+You can edit colors configuration file (`colors.json`) to customize the colors.  
 Use command:  
 `Window Color Rotator: Customize Colors` to open the color configuration file.
 
@@ -54,24 +54,28 @@ The color configuration file is in the extension's global storage:
 `~/Library/Application Support/Code/User/globalStorage/gcc3.vscode-color-rotator/colors.json`.  
 
 File Structure  
-It stores the colors and the project paths, one color can be associated with multiple projects.  
-Color example:  
+`colors.json` stores the colors and the project paths, one color can be associated with multiple projects.  
+
+Fields  
+Field `workbench.colorCustomizations` is the color setting, it will be copied to the `settings.json` in `.vscode` folder.  
+Filed `projectPath` is an array of project paths that are associated with the color.  
+
+Color Example:  
 ```json
 {
-    "colorName": "pink",
-    "color": "#ffeaea",
+    "colorName": "pink",  // color name, just for reference
+    "color": "#ffeaea",  // primary color, just for reference
     "workbench.colorCustomizations": {
-        "titleBar.activeBackground": "#ffeaea",
-        "titleBar.inactiveBackground": "#ffeaea",
-        "titleBar.activeForeground": "#1e1e1e",
-        "titleBar.inactiveForeground": "#6d6c6f",
-        "statusBar.background": "#ffeaea"
+        "titleBar.activeBackground": "#ffeaea",  // title bar active background color
+        "titleBar.inactiveBackground": "#ffeaea",  // title bar inactive background color
+        "titleBar.activeForeground": "#1e1e1e",  // title bar active foreground color
+        "titleBar.inactiveForeground": "#6d6c6f",  // title bar inactive foreground color
+        "statusBar.background": "#ffeaea",  // status bar background color
+        "statusBar.foreground": "#1e1e1e",  // status bar foreground color
     },
-    "projectPath": []
+    "projectPath": []  // array of project paths that are associated with the color
 }
 ```
-Field `workbench.colorCustomizations` will be copied to the `settings.json` file.  
-Filed `projectPath` is an array of project paths that are associated with the color.  
 
 
 Local Execution
