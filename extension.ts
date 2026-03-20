@@ -67,10 +67,25 @@ export async function activate(
     }
   );
 
+  const customizeDisposable = vscode.commands.registerCommand(
+    'window-color-rotator.customize',
+    () => {
+      // Open the `colors.json` file in the user's global storage directory
+      const colorsFileUri = vscode.Uri.joinPath(
+        context.globalStorageUri,
+        'colors.json'
+      );
+      vscode.workspace.openTextDocument(colorsFileUri).then(doc => {
+        vscode.window.showTextDocument(doc);
+      });
+    }
+  );
+
   context.subscriptions.push(
     rotateDisposable,
     clearDisposable,
-    resetAllDisposable
+    resetAllDisposable,
+    customizeDisposable
   );
 
   // Run loadColor on activation to apply the color for the current project

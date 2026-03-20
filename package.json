@@ -37,6 +37,10 @@
       {
         "command": "window-color-rotator.resetall",
         "title": "Window Color Rotator: Reset All"
+      },
+      {
+        "command": "window-color-rotator.customize",
+        "title": "Window Color Rotator: Customize Colors"
       }
     ]
   },

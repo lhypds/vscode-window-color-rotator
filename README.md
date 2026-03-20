@@ -12,6 +12,12 @@ Quick Start
 Press Ctrl + Shift + P, then type `Window Color Rotator` to trigger the command.  
 It can remember a color for each project.  
 
+Support commands:  
+- `Window Color Rotator: Rotate` to rotate the color for the current project window.  
+- `Window Color Rotator: Clear` to clear the color for the current project window.  
+- `Window Color Rotator: Reset All` to clear the colors for all projects.  
+- `Window Color Rotator: Customize Colors` to customize the colors in the color configuration file.  
+
 
 How It Works
 ------------
@@ -40,11 +46,14 @@ Customize Colors
 ----------------
 
 You can use colors configuration (`colors.json`) to customize the colors.  
+Use command:  
+`Window Color Rotator: Customize Colors` to open the color configuration file.
 
-Location  
+File Location  
 The color configuration file is in the extension's global storage:  
 `~/Library/Application Support/Code/User/globalStorage/gcc3.vscode-color-rotator/colors.json`.  
 
+File Structure  
 It stores the colors and the project paths, one color can be associated with multiple projects.  
 Color example:  
 ```json
@@ -61,7 +70,8 @@ Color example:
     "projectPath": []
 }
 ```
-Field `workbench.colorCustomizations` will be copied to the `settings.json` file.
+Field `workbench.colorCustomizations` will be copied to the `settings.json` file.  
+Filed `projectPath` is an array of project paths that are associated with the color.  
 
 
 Local Execution
@@ -75,3 +85,5 @@ Scripts:
 `clear.sh` to clear window color.  
 `load.sh` to load the color for current project.  
 `resetall.sh` to reset all window colors.  
+
+For local execution, `colors.json` file is in the cloned folder.  
