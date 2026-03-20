@@ -19,6 +19,34 @@ export async function activate(
     await vscode.workspace.fs.createDirectory(context.globalStorageUri);
   }
 
+  // Initialize the colors.json file if it doesn't exist
+  const colorsFileUri = vscode.Uri.joinPath(
+    context.globalStorageUri,
+    'colors.json'
+  );
+  try {
+    await vscode.workspace.fs.stat(colorsFileUri);
+  } catch {
+    console.log('colors.json not found, creating from example...');
+
+    // Show a command-palette style confirmation before resetting all colors
+    const lightOrDark = await vscode.window.showQuickPick(['Light', 'Dark'], {
+      placeHolder: 'Window Color Rotator: You prefer a light or a dark theme?',
+      ignoreFocusOut: true
+    });
+
+    // Read from example and write to `colors.json`
+    const exampleColorsContent = await vscode.workspace.fs.readFile(
+      vscode.Uri.joinPath(
+        context.extensionUri,
+        lightOrDark === 'Light'
+          ? 'colors.json.example'
+          : 'colors.dark.json.example'
+      )
+    );
+    await vscode.workspace.fs.writeFile(colorsFileUri, exampleColorsContent);
+  }
+
   const rotateDisposable = vscode.commands.registerCommand(
     'window-color-rotator.rotate',
     () => {
@@ -48,9 +76,10 @@ export async function activate(
     async () => {
       // Show a command-palette style confirmation before resetting all colors
       const confirmation = await vscode.window.showQuickPick(
-        ['Reset colors for all projects', 'Cancel'],
+        ['Reset colors for all project windows', 'Cancel'],
         {
-          placeHolder: 'This will reset color for all workspaces. Continue?',
+          placeHolder:
+            'This will reset colors for all project windows. Continue?',
           ignoreFocusOut: true
         }
       );

@@ -202,13 +202,13 @@ export function loadColor(
   const assignedColor = colorsList.find(entry =>
     entry.projectPath?.includes(projectPath)
   );
-  if (!assignedColor) {
+  if (assignedColor) {
+    console.log(
+      `Found color: ${assignedColor['workbench.colorCustomizations']['titleBar.activeBackground']}`
+    );
+  } else {
     console.log(`No color assigned to project: ${projectPath}`);
-    return;
   }
-  console.log(
-    `Found color: ${assignedColor['workbench.colorCustomizations']['titleBar.activeBackground']}`
-  );
 
   // Ensure `.vscode`
   const dotVscodePath = path.join(projectPath, '.vscode');
@@ -241,14 +241,30 @@ export function loadColor(
   }
 
   // Apply the color to `settings.json`
-  settingsJson['workbench.colorCustomizations'] =
-    assignedColor['workbench.colorCustomizations'];
-  fs.writeFileSync(
-    settingsPath,
-    JSON.stringify(settingsJson, null, 2) + '\n',
-    'utf-8'
-  );
-  console.log('Color loaded to `workbench.colorCustomizations`.');
+  if (assignedColor) {
+    settingsJson['workbench.colorCustomizations'] =
+      assignedColor['workbench.colorCustomizations'];
+    fs.writeFileSync(
+      settingsPath,
+      JSON.stringify(settingsJson, null, 2) + '\n',
+      'utf-8'
+    );
+  } else {
+    // Remove the `workbench.colorCustomizations` if no color is assigned to this project
+    if ('workbench.colorCustomizations' in settingsJson) {
+      delete settingsJson['workbench.colorCustomizations'];
+      fs.writeFileSync(
+        settingsPath,
+        JSON.stringify(settingsJson, null, 2) + '\n',
+        'utf-8'
+      );
+      console.log(
+        'Removed `workbench.colorCustomizations` from `settings.json` since no color is assigned to this project.'
+      );
+    }
+  }
+
+  console.log('Color loaded.');
 }
 
 export function clearColor(
