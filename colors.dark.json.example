@@ -75,9 +75,7 @@
       "statusBar.background": "#422343",
       "statusBar.foreground": "#f3f3f5"
     },
-    "projectPath": [
-      "/Users/liu/code/vscode-window-color-rotator"
-    ]
+    "projectPath": []
   },
   {
     "colorName": "rose",
