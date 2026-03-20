@@ -1,13 +1,13 @@
 [
   {
     "colorName": "pink",
-    "color": "#432323",
+    "color": "#5a244a",
     "workbench.colorCustomizations": {
-      "titleBar.activeBackground": "#432323",
-      "titleBar.inactiveBackground": "#432323",
+      "titleBar.activeBackground": "#5a244a",
+      "titleBar.inactiveBackground": "#5a244a",
       "titleBar.activeForeground": "#f3f3f5",
       "titleBar.inactiveForeground": "#a8a8ad",
-      "statusBar.background": "#432323",
+      "statusBar.background": "#5a244a",
       "statusBar.foreground": "#f3f3f5"
     },
     "projectPath": []
@@ -27,13 +27,13 @@
   },
   {
     "colorName": "blue",
-    "color": "#234243",
+    "color": "#355859",
     "workbench.colorCustomizations": {
-      "titleBar.activeBackground": "#234243",
-      "titleBar.inactiveBackground": "#234243",
+      "titleBar.activeBackground": "#355859",
+      "titleBar.inactiveBackground": "#355859",
       "titleBar.activeForeground": "#f3f3f5",
       "titleBar.inactiveForeground": "#a8a8ad",
-      "statusBar.background": "#234243",
+      "statusBar.background": "#355859",
       "statusBar.foreground": "#f3f3f5"
     },
     "projectPath": []
@@ -79,26 +79,26 @@
   },
   {
     "colorName": "rose",
-    "color": "#43232f",
+    "color": "#793c52",
     "workbench.colorCustomizations": {
-      "titleBar.activeBackground": "#43232f",
-      "titleBar.inactiveBackground": "#43232f",
+      "titleBar.activeBackground": "#793c52",
+      "titleBar.inactiveBackground": "#793c52",
       "titleBar.activeForeground": "#f3f3f5",
       "titleBar.inactiveForeground": "#a8a8ad",
-      "statusBar.background": "#43232f",
+      "statusBar.background": "#793c52",
       "statusBar.foreground": "#f3f3f5"
     },
     "projectPath": []
   },
   {
     "colorName": "red",
-    "color": "#432324",
+    "color": "#5a1f24",
     "workbench.colorCustomizations": {
-      "titleBar.activeBackground": "#432324",
-      "titleBar.inactiveBackground": "#432324",
+      "titleBar.activeBackground": "#5a1f24",
+      "titleBar.inactiveBackground": "#5a1f24",
       "titleBar.activeForeground": "#f3f3f5",
       "titleBar.inactiveForeground": "#a8a8ad",
-      "statusBar.background": "#432324",
+      "statusBar.background": "#5a1f24",
       "statusBar.foreground": "#f3f3f5"
     },
     "projectPath": []
