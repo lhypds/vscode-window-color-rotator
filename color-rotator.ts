@@ -1,6 +1,11 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import * as vscode from 'vscode';
+let vscode: typeof import('vscode') | undefined;
+try {
+  vscode = require('vscode');
+} catch {
+  vscode = undefined;
+}
 import JSON5 from 'json5';
 
 const VERSION = '1.0.0';
@@ -49,7 +54,7 @@ export function rotateColor(
     settingsJson = JSON5.parse(settingsContent);
   } catch {
     console.log(`Error: ${settingsPath} contains invalid JSON.`);
-    vscode.window.showWarningMessage(
+    vscode?.window.showWarningMessage(
       'Aborted: `.vscode/settings.json` contains invalid JSON.'
     );
     return;
@@ -72,7 +77,7 @@ export function rotateColor(
     colorsJson = JSON5.parse(colorsContent);
   } catch {
     console.log(`Error: ${colorsPath} contains invalid JSON.`);
-    vscode.window.showWarningMessage(
+    vscode?.window.showWarningMessage(
       'Aborted: `colors.json` contains invalid JSON.'
     );
     return;
@@ -178,7 +183,7 @@ export function loadColor(
     colorsJson = JSON5.parse(colorsContent);
   } catch {
     console.log(`Error: ${colorsPath} contains invalid JSON.`);
-    vscode.window.showWarningMessage(
+    vscode?.window.showWarningMessage(
       'Aborted: `colors.json` contains invalid JSON.'
     );
     return;
@@ -234,7 +239,7 @@ export function loadColor(
     settingsJson = JSON5.parse(settingsContent);
   } catch {
     console.log(`Error: ${settingsPath} contains invalid JSON.`);
-    vscode.window.showWarningMessage(
+    vscode?.window.showWarningMessage(
       'Aborted: `.vscode/settings.json` contains invalid JSON.'
     );
     return;
@@ -281,7 +286,7 @@ export function clearColor(
       colorsJson = JSON5.parse(colorsContent);
     } catch {
       console.log(`Error: ${colorsPath} contains invalid JSON.`);
-      vscode.window.showWarningMessage(
+      vscode?.window.showWarningMessage(
         'Aborted: `colors.json` contains invalid JSON.'
       );
       return;
@@ -339,7 +344,7 @@ export function clearColor(
     settingsJson = JSON5.parse(settingsContent);
   } catch {
     console.log(`Error: ${settingsPath} contains invalid JSON.`);
-    vscode.window.showWarningMessage(
+    vscode?.window.showWarningMessage(
       'Aborted: `.vscode/settings.json` contains invalid JSON.'
     );
     return;
