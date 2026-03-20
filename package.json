@@ -2,7 +2,7 @@
   "name": "window-color-rotator",
   "displayName": "Window Color Rotator",
   "publisher": "gcc3",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Color your project windows.",
   "icon": "images/icon-192x192.png",
   "license": "MIT",
