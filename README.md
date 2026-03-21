@@ -26,6 +26,8 @@ Search `Window Color Rotator` in the VS Code extension marketplace and install i
 How To Uninstall  
 Uninstall the extension from the VS Code extension marketplace.  
 Remove the `workbench.colorCustomizations` field in the project's `.vscode/settings.json` file.  
+(optional) Remove the cache files in the extension's global storage:  
+`~/Library/Application Support/Code/User/globalStorage/gcc3.vscode-color-rotator`.  
 
 
 Quick Start
