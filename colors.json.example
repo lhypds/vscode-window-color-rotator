@@ -1,117 +1,130 @@
 [
   {
-    "colorName": "pink",
-    "color": "#ffeaea",
+    "colorName": "gray",
+    "color": "#F8F8FA",
     "workbench.colorCustomizations": {
-      "titleBar.activeBackground": "#ffeaea",
-      "titleBar.inactiveBackground": "#ffeaea",
+      "titleBar.activeBackground": "#F8F8FA",
+      "titleBar.inactiveBackground": "#F8F8FA",
       "titleBar.activeForeground": "#1e1e1e",
       "titleBar.inactiveForeground": "#6d6c6f",
-      "statusBar.background": "#ffeaea",
+      "statusBar.background": "#F8F8FA",
       "statusBar.foreground": "#1e1e1e"
     },
     "projectPath": []
   },
   {
-    "colorName": "green",
-    "color": "#f2ffea",
+    "colorName": "yellow",
+    "color": "#FDF2CE",
     "workbench.colorCustomizations": {
-      "titleBar.activeBackground": "#f2ffea",
-      "titleBar.inactiveBackground": "#f2ffea",
+      "titleBar.activeBackground": "#FDF2CE",
+      "titleBar.inactiveBackground": "#FDF2CE",
       "titleBar.activeForeground": "#1e1e1e",
       "titleBar.inactiveForeground": "#6d6c6f",
-      "statusBar.background": "#f2ffea",
-      "statusBar.foreground": "#1e1e1e"
-    },
-    "projectPath": []
-  },
-  {
-    "colorName": "blue",
-    "color": "#eafeff",
-    "workbench.colorCustomizations": {
-      "titleBar.activeBackground": "#eafeff",
-      "titleBar.inactiveBackground": "#eafeff",
-      "titleBar.activeForeground": "#1e1e1e",
-      "titleBar.inactiveForeground": "#6d6c6f",
-      "statusBar.background": "#eafeff",
-      "statusBar.foreground": "#1e1e1e"
-    },
-    "projectPath": []
-  },
-  {
-    "colorName": "skyblue",
-    "color": "#eaf6ff",
-    "workbench.colorCustomizations": {
-      "titleBar.activeBackground": "#eaf6ff",
-      "titleBar.inactiveBackground": "#eaf6ff",
-      "titleBar.activeForeground": "#1e1e1e",
-      "titleBar.inactiveForeground": "#6d6c6f",
-      "statusBar.background": "#eaf6ff",
-      "statusBar.foreground": "#1e1e1e"
-    },
-    "projectPath": []
-  },
-  {
-    "colorName": "purple",
-    "color": "#eceaff",
-    "workbench.colorCustomizations": {
-      "titleBar.activeBackground": "#eceaff",
-      "titleBar.inactiveBackground": "#eceaff",
-      "titleBar.activeForeground": "#1e1e1e",
-      "titleBar.inactiveForeground": "#6d6c6f",
-      "statusBar.background": "#eceaff",
-      "statusBar.foreground": "#1e1e1e"
-    },
-    "projectPath": []
-  },
-  {
-    "colorName": "lavender",
-    "color": "#feeaff",
-    "workbench.colorCustomizations": {
-      "titleBar.activeBackground": "#feeaff",
-      "titleBar.inactiveBackground": "#feeaff",
-      "titleBar.activeForeground": "#1e1e1e",
-      "titleBar.inactiveForeground": "#6d6c6f",
-      "statusBar.background": "#feeaff",
-      "statusBar.foreground": "#1e1e1e"
-    },
-    "projectPath": []
-  },
-  {
-    "colorName": "rose",
-    "color": "#ffeaf2",
-    "workbench.colorCustomizations": {
-      "titleBar.activeBackground": "#ffeaf2",
-      "titleBar.inactiveBackground": "#ffeaf2",
-      "titleBar.activeForeground": "#1e1e1e",
-      "titleBar.inactiveForeground": "#6d6c6f",
-      "statusBar.background": "#ffeaf2",
-      "statusBar.foreground": "#1e1e1e"
-    },
-    "projectPath": []
-  },
-  {
-    "colorName": "red",
-    "color": "#ffeaeb",
-    "workbench.colorCustomizations": {
-      "titleBar.activeBackground": "#ffeaeb",
-      "titleBar.inactiveBackground": "#ffeaeb",
-      "titleBar.activeForeground": "#1e1e1e",
-      "titleBar.inactiveForeground": "#6d6c6f",
-      "statusBar.background": "#ffeaeb",
+      "statusBar.background": "#FDF2CE",
       "statusBar.foreground": "#1e1e1e"
     },
     "projectPath": []
   },
   {
     "colorName": "orange",
-    "color": "#ffecd6",
+    "color": "#FCEBD3",
     "workbench.colorCustomizations": {
-      "titleBar.activeBackground": "#ffecd6",
-      "titleBar.inactiveBackground": "#ffecd6",
+      "titleBar.activeBackground": "#FCEBD3",
+      "titleBar.inactiveBackground": "#FCEBD3",
       "titleBar.activeForeground": "#1e1e1e",
       "titleBar.inactiveForeground": "#6d6c6f",
-      "statusBar.background": "#ffecd6",
+      "statusBar.background": "#FCEBD3",
+      "statusBar.foreground": "#1e1e1e"
+    },
+    "projectPath": []
+  },
+  {
+    "colorName": "red",
+    "color": "#FBE6E7",
+    "workbench.colorCustomizations": {
+      "titleBar.activeBackground": "#FBE6E7",
+      "titleBar.inactiveBackground": "#FBE6E7",
+      "titleBar.activeForeground": "#1e1e1e",
+      "titleBar.inactiveForeground": "#6d6c6f",
+      "statusBar.background": "#FBE6E7",
+      "statusBar.foreground": "#1e1e1e"
+    },
+    "projectPath": []
+  },
+  {
+    "colorName": "pink",
+    "color": "#FBE6F1",
+    "workbench.colorCustomizations": {
+      "titleBar.activeBackground": "#FBE6F1",
+      "titleBar.inactiveBackground": "#FBE6F1",
+      "titleBar.activeForeground": "#1e1e1e",
+      "titleBar.inactiveForeground": "#6d6c6f",
+      "statusBar.background": "#FBE6F1",
+      "statusBar.foreground": "#1e1e1e"
+    },
+    "projectPath": []
+  },
+  {
+    "colorName": "purple",
+    "color": "#FCEBFE",
+    "workbench.colorCustomizations": {
+      "titleBar.activeBackground": "#FCEBFE",
+      "titleBar.inactiveBackground": "#FCEBFE",
+      "titleBar.activeForeground": "#1e1e1e",
+      "titleBar.inactiveForeground": "#6d6c6f",
+      "statusBar.background": "#FCEBFE",
+      "statusBar.foreground": "#1e1e1e"
+    },
+    "projectPath": []
+  },
+  {
+    "colorName": "violet",
+    "color": "#F1EEFE",
+    "workbench.colorCustomizations": {
+      "titleBar.activeBackground": "#F1EEFE",
+      "titleBar.inactiveBackground": "#F1EEFE",
+      "titleBar.activeForeground": "#1e1e1e",
+      "titleBar.inactiveForeground": "#6d6c6f",
+      "statusBar.background": "#F1EEFE",
+      "statusBar.foreground": "#1e1e1e"
+    },
+    "projectPath": []
+  },
+  {
+    "colorName": "blue",
+    "color": "#E2F5FE",
+    "workbench.colorCustomizations": {
+      "titleBar.activeBackground": "#E2F5FE",
+      "titleBar.inactiveBackground": "#E2F5FE",
+      "titleBar.activeForeground": "#1e1e1e",
+      "titleBar.inactiveForeground": "#6d6c6f",
+      "statusBar.background": "#E2F5FE",
+      "statusBar.foreground": "#1e1e1e"
+    },
+    "projectPath": []
+  },
+  {
+    "colorName": "green",
+    "color": "#E3FDDF",
+    "workbench.colorCustomizations": {
+      "titleBar.activeBackground": "#E3FDDF",
+      "titleBar.inactiveBackground": "#E3FDDF",
+      "titleBar.activeForeground": "#1e1e1e",
+      "titleBar.inactiveForeground": "#6d6c6f",
+      "statusBar.background": "#E3FDDF",
+      "statusBar.foreground": "#1e1e1e"
+    },
+    "projectPath": []
+  },
+  {
+    "colorName": "cyan",
+    "color": "#D3FEFE",
+    "workbench.colorCustomizations": {
+      "titleBar.activeBackground": "#D3FEFE",
+      "titleBar.inactiveBackground": "#D3FEFE",
+      "titleBar.activeForeground": "#1e1e1e",
+      "titleBar.inactiveForeground": "#6d6c6f",
+      "statusBar.background": "#D3FEFE",
       "statusBar.foreground": "#1e1e1e"
     },
     "projectPath": []
